@@ -14,8 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/items")
-@CrossOrigin(origins = "*")
+@RequestMapping("api/items")
 public class ItemController {
 
     @Autowired
