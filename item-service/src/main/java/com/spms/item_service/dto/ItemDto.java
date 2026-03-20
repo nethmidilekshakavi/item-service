@@ -10,7 +10,6 @@ public class ItemDto {
     private String contactEmail;
     private String contactPhone;
 
-    // ---------- Getters & Setters ----------
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

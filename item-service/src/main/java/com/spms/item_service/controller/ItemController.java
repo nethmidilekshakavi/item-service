@@ -21,21 +21,6 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    // ─── CREATE ──────────────────────────────────────────────────────────────
-
-    /**
-     * POST /api/v1/items
-     * Accepts multipart/form-data so the caller can attach an image.
-     *
-     * Example (curl):
-     *   curl -X POST http://localhost:8083/api/v1/items \
-     *     -F "name=Blue Wallet" \
-     *     -F "description=Found near gate 5" \
-     *     -F "category=FOUND" \
-     *     -F "location=Gate 5" \
-     *     -F "contactEmail=user@example.com" \
-     *     -F "image=@/path/to/photo.jpg"
-     */
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> createItem(
             @RequestParam("name")              String name,
